@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<%= link_to 'All Agencies', agencies_path %>
+
+<h1>
+  <%= @agency.name %> (<%= @agency.code %>)
+</h1>
+
+<h4>Information Collection Requests:</h4>
+<ul>
+<% @icrs.each do |icr| %>
+  <li>
+    <%= link_to icr.title, icr %>
+    <ul>
+      <% icr.information_collections.each do |ic| %>
+        <li><%= link_to ic.title, ic %> <% ic.rest_of_desc %></li>
+      <% end %>
+    </ul>
+  </li>
+<% end %>
+</ul>
+
+
+<h4>Contact:</h4>
+<% @icrs.map(&:contacts).flatten.uniq.compact.each do |contact| %>
+  <%= render partial: "contacts/contact", locals: {contact: contact} %>
+<% end %>
+
+<p>
+<%= link_to 'Edit', edit_agency_path(@agency) %>
+</p>

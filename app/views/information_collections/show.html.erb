@@ -1,0 +1,57 @@
+<p id="notice"><%= notice %></p>
+
+<h1>  <%= @information_collection.title %>
+</h1>
+<h3><%= @information_collection.information_collection_request.agency.name %></h3>
+
+<p>
+  <strong>Line of Business:</strong>
+  <%= @information_collection.line_of_business %>
+</p>
+
+<p>
+  <strong>Line of Business subfunction:</strong>
+  <%= @information_collection.lob_subfunction %>
+</p>
+
+<p>
+  <strong>Standard form indicator:</strong>
+  <%= @information_collection.standard_form_indicator %>
+</p>
+
+<p>
+  <strong>Obligatory?</strong>
+  <%= @information_collection.obligation_code %>
+</p>
+
+<p>
+  <strong>Affected public code:</strong>
+  <%= @information_collection.affected_public_code %>
+</p>
+
+<p>
+  <strong>Number responses:</strong>
+  <%= @information_collection.number_responses %>
+</p>
+
+<p>
+  <strong>Burden cost total:</strong>
+  <%= @information_collection.burden_cost_total %>
+</p>
+
+<p>
+  <strong>Burden hour total:</strong>
+  <%= @information_collection.burden_hour_total %>
+</p>
+
+<p>
+  <strong>Response frequency:</strong>
+  <%= @information_collection.response_frequency %>
+</p>
+
+<p>
+  <strong>C.F.R. citations:</strong>
+  <%= @information_collection.cfr_citations %>
+</p>
+
+<%= link_to 'Back', @information_collection.information_collection_request %>

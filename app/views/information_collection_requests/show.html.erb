@@ -1,0 +1,108 @@
+<p id="notice"><%= notice %></p>
+
+<h1><%= @information_collection_request.title %></h1>
+<h2> <%= @information_collection_request.agency.name || @information_collection_request.agency.code %></h2>
+
+<p>
+  <strong>Abstract:</strong>
+  <%= @information_collection_request.abstract %>
+</p>
+<p>
+  <strong>Information Collections</strong>
+  <ul>
+  <% @ics.each do |ic| %>
+    <li><%= link_to ic.title, ic %> <%= ic.rest_of_desc %></li>
+  <% end %>
+  </ul>
+</p>
+
+
+<h4>Contact:</h4>
+<% @information_collection_request.contacts.compact.each do |contact| %>
+  <%= render partial: "contacts/contact", locals: {contact: contact}  %>
+<% end %>
+
+<hr />
+
+<p>
+  <strong>ICR type code:</strong>
+  <%= @information_collection_request.icr_type_code %>
+</p>
+
+<p>
+  <strong>Expiration:</strong>
+  <%= @information_collection_request.expiration %>
+</p>
+
+<p>
+  <strong>ICR status:</strong>
+  <%= @information_collection_request.icr_status %>
+</p>
+
+<% if @information_collection_request.stimulus_indicator || @information_collection_request.healthcare_indicator || @information_collection_request.dodd_frank_act_indicator %>
+  <p>
+    <strong>Indicators:</strong>
+    <%= @information_collection_request.stimulus_indicator ? 'Stimulus' : '' %>
+    <%= @information_collection_request.healthcare_indicator ? 'Healthcare' : '' %>
+    <%= @information_collection_request.dodd_frank_act_indicator ? 'Dodd-Frank Act' : '' %>
+  </p>
+<% end %>
+
+<p>
+  <strong>OMB control number:</strong>
+  <%= @information_collection_request.omb_control_number %>
+</p>
+
+<p>
+  <strong>ICR reference number:</strong>
+  <%= @information_collection_request.icr_reference_number %>
+</p>
+
+<p>
+  <strong>Authorizing statutes:</strong>
+  <%= @information_collection_request.authorizing_statutes %>
+</p>
+
+<p>
+  <strong>Burden hour total quantity:</strong>
+  <%= @information_collection_request.burden_hour_total_quantity %>
+</p>
+
+<p>
+  <strong>Burden hour previous total quantity:</strong>
+  <%= @information_collection_request.burden_hour_previous_total_quantity %>
+</p>
+
+<p>
+  <strong>Burden cost total amount:</strong>
+  <%= @information_collection_request.burden_cost_total_amount %>
+</p>
+
+<p>
+  <strong>Burden cost previous total amount:</strong>
+  <%= @information_collection_request.burden_cost_previous_total_amount %>
+</p>
+
+<p>
+  <strong>Burden response total quantity:</strong>
+  <%= @information_collection_request.burden_response_total_quantity %>
+</p>
+
+<p>
+  <strong>Burden response previous total quantity:</strong>
+  <%= @information_collection_request.burden_response_previous_total_quantity %>
+</p>
+
+<p>
+  <strong>Oira conclusion response concluded date:</strong>
+  <%= @information_collection_request.oira_conclusion_response_concluded_date %>
+</p>
+
+<p>
+  <strong>Oira conclusion concluded terms:</strong>
+  <%= @information_collection_request.oira_conclusion_concluded_terms %>
+</p>
+
+
+<%= link_to 'Edit', edit_information_collection_request_path(@information_collection_request) %> |
+<%= link_to 'Back', information_collection_requests_path %>

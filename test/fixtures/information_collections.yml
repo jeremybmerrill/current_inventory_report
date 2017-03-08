@@ -1,0 +1,29 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  standard_form_indicator: false
+  obligation_code: MyString
+  line_of_business: MyString
+  lob_subfunction: MyString
+  affected_public_code: MyString
+  number_responses: 1
+  burden_cost_total: 1
+  burden_hour_total: 1
+  response_frequency: MyString
+  cfr_citations: MyText
+  information_collection_request_id: 1
+
+two:
+  title: MyString
+  standard_form_indicator: false
+  obligation_code: MyString
+  line_of_business: MyString
+  lob_subfunction: MyString
+  affected_public_code: MyString
+  number_responses: 1
+  burden_cost_total: 1
+  burden_hour_total: 1
+  response_frequency: MyString
+  cfr_citations: MyText
+  information_collection_request_id: 1

@@ -1,0 +1,47 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  agency_id: MyString
+  omb_control_number: MyString
+  icr_reference_number: MyString
+  agency_code: 
+  title: MyString
+  abstract: MyText
+  icr_type_code: MyString
+  expiration: 2017-03-01
+  icr_status: MyString
+  stimulus_indicator: false
+  healthcare_indicator: false
+  dodd_frank_act_indicator: false
+  authorizing_statutes: MyText
+  burden_hour_total_quantity: 1
+  burden_hour_previous_total_quantity: 1
+  burden_cost_total_amount: 1
+  burden_cost_previous_total_amount: 1
+  burden_response_total_quantity: 1
+  burden_response_previous_total_quantity: 1
+  oira_conclusion_response_concluded_date: 2017-03-01
+  oira_conclusion_concluded_terms: MyText
+
+two:
+  agency_id: MyString
+  omb_control_number: MyString
+  icr_reference_number: MyString
+  agency_code: 
+  title: MyString
+  abstract: MyText
+  icr_type_code: MyString
+  expiration: 2017-03-01
+  icr_status: MyString
+  stimulus_indicator: false
+  healthcare_indicator: false
+  dodd_frank_act_indicator: false
+  authorizing_statutes: MyText
+  burden_hour_total_quantity: 1
+  burden_hour_previous_total_quantity: 1
+  burden_cost_total_amount: 1
+  burden_cost_previous_total_amount: 1
+  burden_response_total_quantity: 1
+  burden_response_previous_total_quantity: 1
+  oira_conclusion_response_concluded_date: 2017-03-01
+  oira_conclusion_concluded_terms: MyText

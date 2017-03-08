@@ -1,0 +1,65 @@
+<%= form_for(@information_collection) do |f| %>
+  <% if @information_collection.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@information_collection.errors.count, "error") %> prohibited this information_collection from being saved:</h2>
+
+      <ul>
+      <% @information_collection.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :title %><br>
+    <%= f.text_field :title %>
+  </div>
+  <div class="field">
+    <%= f.label :standard_form_indicator %><br>
+    <%= f.check_box :standard_form_indicator %>
+  </div>
+  <div class="field">
+    <%= f.label :obligation_code %><br>
+    <%= f.text_field :obligation_code %>
+  </div>
+  <div class="field">
+    <%= f.label :line_of_business %><br>
+    <%= f.text_field :line_of_business %>
+  </div>
+  <div class="field">
+    <%= f.label :lob_subfunction %><br>
+    <%= f.text_field :lob_subfunction %>
+  </div>
+  <div class="field">
+    <%= f.label :affected_public_code %><br>
+    <%= f.text_field :affected_public_code %>
+  </div>
+  <div class="field">
+    <%= f.label :number_responses %><br>
+    <%= f.number_field :number_responses %>
+  </div>
+  <div class="field">
+    <%= f.label :burden_cost_total %><br>
+    <%= f.number_field :burden_cost_total %>
+  </div>
+  <div class="field">
+    <%= f.label :burden_hour_total %><br>
+    <%= f.number_field :burden_hour_total %>
+  </div>
+  <div class="field">
+    <%= f.label :response_frequency %><br>
+    <%= f.text_field :response_frequency %>
+  </div>
+  <div class="field">
+    <%= f.label :cfr_citations %><br>
+    <%= f.text_area :cfr_citations %>
+  </div>
+  <div class="field">
+    <%= f.label :information_collection_request_id %><br>
+    <%= f.number_field :information_collection_request_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

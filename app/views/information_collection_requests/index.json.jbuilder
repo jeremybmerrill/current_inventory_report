@@ -1,0 +1,1 @@
+json.array! @information_collection_requests, partial: 'information_collection_requests/information_collection_request', as: :information_collection_request
