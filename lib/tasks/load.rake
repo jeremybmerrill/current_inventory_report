@@ -8,10 +8,9 @@ task "agency_codes": [:environment, File.join(Rails.root, "db", "AGY_AGENCY_LIST
   doc = Nokogiri::XML(xml)
   doc.xpath('//AGENCY').each do |agy|
     code = agy.xpath("./AGENCY_CODE").text
-    a = Agency.find_or_initialize_by(
-      { 
-        :code => code,
-      })
+    a = Agency.find_or_initialize_by({ 
+      :code => code,
+    })
     a.name = agy.xpath("./NAME").text
     a.acronym = agy.xpath("./ACRONYM").text
     code_mod_hundred = (code.to_i / 100) * 100
@@ -101,7 +100,7 @@ task loadicrs: [:environment, :agency_codes, File.join(Rails.root, "db", "Curren
       # puts col.xpath('./BurdenHour/BurdenHourPerResponse//ReportingFrequency').text
       # puts col.xpath('./CFRCitations').text
 
-      InformationCollection.create({
+      InformationCollection.find_or_create_by({
         title: col.xpath('./Title').text,
         standard_form_indicator: col.xpath('./StandardFormIndicator').text,
         obligation_code: col.xpath('./ObligationCode').text,

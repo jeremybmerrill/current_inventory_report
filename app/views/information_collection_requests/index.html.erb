@@ -8,7 +8,6 @@
       <th>Agency</th>
       <th>Omb control number</th>
       <th>Icr reference number</th>
-      <th>Agency code</th>
       <th>Title</th>
       <th>Abstract</th>
       <th>Icr type code</th>
@@ -33,10 +32,9 @@
   <tbody>
     <% @information_collection_requests.each do |information_collection_request| %>
       <tr>
-        <td><%= information_collection_request.agency_id %></td>
+        <td><%= information_collection_request.agency.fullname %></td>
         <td><%= information_collection_request.omb_control_number %></td>
         <td><%= information_collection_request.icr_reference_number %></td>
-        <td><%= information_collection_request.agency_code %></td>
         <td><%= information_collection_request.title %></td>
         <td><%= information_collection_request.abstract %></td>
         <td><%= information_collection_request.icr_type_code %></td>

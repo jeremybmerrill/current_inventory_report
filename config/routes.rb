@@ -1,7 +1,10 @@
 Rails.application.routes.draw do
-  resources :information_collection_requests
-  resources :information_collection_requests
-  resources :information_collections
+  resources :information_collection_requests do 
+    collection do 
+      get 'new_icrs' => "information_collection_requests#new_icrs"
+      get 'removed_icrs' => "information_collection_requests#removed_icrs"
+    end
+  end
   resources :information_collections
   resources :contacts
   resources :agencies

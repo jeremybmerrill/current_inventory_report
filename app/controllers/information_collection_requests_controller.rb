@@ -7,6 +7,16 @@ class InformationCollectionRequestsController < ApplicationController
     @information_collection_requests = InformationCollectionRequest.all
   end
 
+  def new_icrs
+    @information_collection_requests = InformationCollectionRequest.where("created_at > '2017-11-09'")
+    render :index
+  end
+
+  def removed_icrs
+    @information_collection_requests = InformationCollectionRequest.where("updated_at < '2017-11-09'")
+    render :index
+  end
+
   # GET /information_collection_requests/1
   # GET /information_collection_requests/1.json
   def show
