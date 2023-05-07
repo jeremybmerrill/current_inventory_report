@@ -1,1 +1,0 @@
-json.array! @information_collections, partial: 'information_collections/information_collection', as: :information_collection

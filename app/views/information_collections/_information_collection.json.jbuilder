@@ -1,2 +1,0 @@
-json.extract! information_collection, :id, :title, :standard_form_indicator, :obligation_code, :line_of_business, :lob_subfunction, :affected_public_code, :number_responses, :burden_cost_total, :burden_hour_total, :response_frequency, :cfr_citations, :information_collection_request_id, :created_at, :updated_at
-json.url information_collection_url(information_collection, format: :json)
